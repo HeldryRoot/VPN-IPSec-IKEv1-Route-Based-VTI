@@ -73,9 +73,9 @@ Implementar VPN Route-Based con Virtual Tunnel Interface (VTI) e IKEv1. A difere
   
 3. Topología
 
-|   |
+<img width="1195" height="152" alt="1-6" src="https://github.com/user-attachments/assets/95f746ec-6aa5-4d8d-ac1f-ca10c91a1e76" />
+
 |---|
-||
 
 |**Dispositivo**|**Interfaz**|**IP**|**Máscara**|**Descripción**|
 |---|---|---|---|---|
@@ -242,7 +242,8 @@ Tunnel0                172.19.7.1      YES NVRAM  up   �
    
 ! Tunnel0 up/up = tunel VTI activo
 
-| ![[show brief.png]] |
+<img width="1023" height="187" alt="show brief" src="https://github.com/user-attachments/assets/c87eda05-0128-4906-b7d1-5fc46323bbb0" />
+
 | ------------------- |
 
 ## 6.2 Fase 1 — show crypto isakmp sa (QM_IDLE)
@@ -252,7 +253,8 @@ R1-PEER-A# show crypto isakmp sa
 dst             src             state    conn-id status  
 20.25.2.2       20.25.1.1       QM_IDLE     1001 ACTIVE
 
-| ![[isakmp.png]] |
+<img width="842" height="194" alt="isakmp" src="https://github.com/user-attachments/assets/05618b21-966c-4057-ada3-2c2979cd3a30" />
+
 | --------------- |
 
 ## 6.3 Fase 2 — show crypto ipsec sa (interfaz Tunnel0)
@@ -264,7 +266,8 @@ interface: Tunnel0
   #pkts decaps: 5,  #pkts decrypt: 5,  #pkts verify: 5  
   ! La interfaz es Tunnel0, no Ethernet0/0
 
-| ![[encrypt IPSEC.png]] |
+<img width="629" height="51" alt="encrypt IPSEC" src="https://github.com/user-attachments/assets/58b5a783-ad23-4569-9761-fa2c76780d1e" />
+
 | ---------------------- |
 
 ## 6.4 Verificar ruta estática
@@ -276,7 +279,8 @@ S    20.25.9.0/28 is directly connected, Tunnel0
 
 PC-A> ping 20.25.9.2
 
-| ![[Ping.png]] |
+<img width="675" height="190" alt="Ping" src="https://github.com/user-attachments/assets/ff7be59a-0a5d-4180-a83a-612fe12792c2" />
+
 | ------------- |
 
 # 7. Troubleshooting
